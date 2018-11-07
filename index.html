@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<title>Red Clover Reader</title>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="reader/js/reader.js"></script>
+		<link rel="stylesheet" href="reader/reader.css">
+		
+	</head>
+	<body>
+
+		<canvas id="comic"></canvas>
+
+		<script>
+			var book = new ComicBook('comic', [
+				'GoodnightMagicGarden/Goodnight Magic Garden-1.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-2.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-3.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-4.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-5.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-6.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-7.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-8.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-9.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-10.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-11.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-12.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-13.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-14.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-15.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-16.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-17.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-18.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-19.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-20.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-21.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-22.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-23.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-24.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-25.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-26.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-27.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-28.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-29.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-30.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-31.jpg',
+				'GoodnightMagicGarden/Goodnight Magic Garden-32.jpg',
+			], {
+   		});
+
+			book.draw();
+
+			$(window).on('resize', function(event) {
+				book.draw();
+			});
+		</script>
+	</body>
+</html>
