@@ -4095,11 +4095,6 @@
 <body>
     
     <div class="flex-container" id="sketchapp">
-        <header>
-        	<br>
-            <h1><b>Collaborative Reader</b></h1>
-            <br>
-        </header>
 
         <div id="sketchContainer" class="article" style="width: 100%; border: 1px solid rgba(0,0,0,.2);">
             <center>
@@ -4107,28 +4102,19 @@
             </center>
         </div>
         <nav class="nav" style="width: 6%; border: 1px solid rgba(0,0,0,.2);">
-            <div id="toolheader"><b style="font-size: 1.7em;">Functions</b></div>
             <div>
               <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <div style="position:absolute;top:18%;left:23%;padding-top:.25%"><b style="font-size: 1.5em;">Change Colors</b></div>
-                <div style="cursor:pointer;position:absolute;top:22%;left:25%;width:20px;height:20px;background:#27ae60;" class="color-picker" id="green"></div>
-                <div style="cursor:pointer;position:absolute;top:22%;left:28%;width:20px;height:20px;background:#2980b9;" class="color-picker" id="blue"></div>
-                <div style="cursor:pointer;position:absolute;top:22%;left:31%;width:20px;height:20px;background:#e74c3c;" class="color-picker" id="red"></div>
-                <div style="cursor:pointer;position:absolute;top:26%;left:25%;width:20px;height:20px;background:#f1c40f;" class="color-picker" id="yellow"></div>
-                <div style="cursor:pointer;position:absolute;top:26%;left:28%;width:20px;height:20px;background:#d35400;" class="color-picker" id="orange"></div>
-                <div style="cursor:pointer;position:absolute;top:26%;left:31%;width:20px;height:20px;background:#2c3e50;" class="color-picker" id="black"></div>
-                <div style="position:absolute;top:18%;left:36%;padding-top:.25%"><b style="font-size: 1.5em;">Eraser</b></div>
-                <div style="cursor:pointer;position:absolute;top:22%;left:37.5%;width:30px;height:30px;background:white;border:2px solid;" class="eraser" id="white"></div>
-                <input type="button" class="clear" value="clear" id="clr" size="30" style="cursor:pointer;position:absolute;top:22%;left:47.5%;">
-                <div style="position:absolute;top:18%;left:60%;padding-top:.25%"><b style="font-size: 1.5em;">Change Brush Size</b></div>
-                <input type="button" class="minus-size" value="-" id="change" size="30" style="cursor:pointer;position:absolute;top:22%;left:66%;">
-                <input type="button" class="plus-size" value="+" id="change" size="30" style="cursor:pointer;position:absolute;top:22%; left:62%">
-                <div style="position:absolute;top:18%;left:72%;padding-top:.25%"><b style="font-size: 1.5em;">Collaborate</b></div>
-                <input type="button" class="pull-right btn" value="Collaborate" onclick="TogetherJS(this); return false;" size="30" style="cursor:pointer;position:absolute;top:22%;left:75%;">
+                <div style="cursor:pointer;position:absolute;top:0.5%;left:25%;width:20px;height:20px;background:#27ae60;" class="color-picker" id="green"></div>
+                <div style="cursor:pointer;position:absolute;top:0.5%;left:28%;width:20px;height:20px;background:#2980b9;" class="color-picker" id="blue"></div>
+                <div style="cursor:pointer;position:absolute;top:0.5%;left:31%;width:20px;height:20px;background:#e74c3c;" class="color-picker" id="red"></div>
+                <div style="cursor:pointer;position:absolute;top:3%;left:25%;width:20px;height:20px;background:#f1c40f;" class="color-picker" id="yellow"></div>
+                <div style="cursor:pointer;position:absolute;top:3%;left:28%;width:20px;height:20px;background:#d35400;" class="color-picker" id="orange"></div>
+                <div style="cursor:pointer;position:absolute;top:3%;left:31%;width:20px;height:20px;background:#2c3e50;" class="color-picker" id="black"></div>
+                <div style="cursor:pointer;position:absolute;top:0.5%;left:37.5%;width:30px;height:30px;background:white;border:2px solid;" class="eraser" id="white"></div>
+                <input type="button" class="clear" value="clear" id="clr" size="30" style="cursor:pointer;position:absolute;top:0.5%;left:47.5%;">
+                <input type="button" class="minus-size" value="-" id="change" size="30" style="cursor:pointer;position:absolute;top:1%;left:66%;">
+                <input type="button" class="plus-size" value="+" id="change" size="30" style="cursor:pointer;position:absolute;top:1%; left:62%">
+                <input type="button" class="pull-right btn" value="Collaborate" onclick="TogetherJS(this); return false;" size="30" style="cursor:pointer;position:absolute;top:2%;left:75%;">
                 
             </div>
            
@@ -4453,38 +4439,41 @@
     </script>
     		<script>
 			var book = new ComicBook('comic', [
-				'GoodnightMagicGarden/Goodnight Magic Garden-1.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-2.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-3.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-4.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-5.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-6.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-7.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-8.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-9.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-10.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-11.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-12.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-13.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-14.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-15.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-16.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-17.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-18.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-19.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-20.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-21.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-22.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-23.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-24.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-25.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-26.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-27.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-28.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-29.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-30.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-31.jpg',
-				'GoodnightMagicGarden/Goodnight Magic Garden-32.jpg',
+				'RatsMusicalBand/Rat s Musical Band_Wendy White-page-001.jpg',
+				'RatsMusicalBand/Rat s Musical Band_Wendy White-page-002.jpg',
+				'RatsMusicalBand/Rat s Musical Band_Wendy White-page-003.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-004.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-005.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-006.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-007.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-008.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-009.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-010.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-011.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-012.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-013.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-014.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-015.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-016.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-017.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-018.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-019.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-020.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-021.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-022.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-023.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-024.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-025.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-026.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-027.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-028.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-029.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-030.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-031.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-032.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-033.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-034.jpg',
+                
 			], {
    		});
 
