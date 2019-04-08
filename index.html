@@ -13,7 +13,8 @@
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
-    
+    </script>
+
     <script type="text/javascript">
     (function() {
 
@@ -837,51 +838,50 @@
         }
     }
     </style>
+    <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <title>Red Clover Reader</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="reader/js/reader.js"></script>
+        <link rel="stylesheet" href="reader/reader.css">
 </head>
 
 <body>
     
     <div class="flex-container" id="sketchapp">
-        <header>
-            <h1><b>Collaborative Chalkboard</b></h1>
-        </header>
-      <!--  <button class="pull-right btn" onclick="TogetherJS(this); return false;">
-            Collaborate
-        </button>
-    -->
+
         <div id="sketchContainer" class="article" style="width: 100%; border: 1px solid rgba(0,0,0,.2);">
             <center>
-                <canvas id="sketch" width="900%" height="570%" color="#FFFFFF" style="\border:6px solid #ecf0f1;"></canvas>
+                <canvas id="comic" width="900%" height="570%" color="#FFFFFF" style="\border:6px solid #ecf0f1;"></canvas>
             </center>
         </div>
+
         <nav class="nav" style="width: 6%; border: 1px solid rgba(0,0,0,.2);">
-            <div id="toolheader"><b>Functions</b></div>
             <div>
               <br>
-              <br>
-              <div style="position:absolute;top:27%;left:3%;padding-top:.25%"><b>Change Colors</b></div>
-                <div style="cursor:pointer;position:absolute;top:31%;left:5%;width:20px;height:20px;background:#27ae60;" class="color-picker" id="green"></div>
-                <div style="cursor:pointer;position:absolute;top:31%;left:8%;width:20px;height:20px;background:#2980b9;" class="color-picker" id="blue"></div>
-                <div style="cursor:pointer;position:absolute;top:31%;left:11%;width:20px;height:20px;background:#e74c3c;" class="color-picker" id="red"></div>
-                <div style="cursor:pointer;position:absolute;top:35%;left:5%;width:20px;height:20px;background:#f1c40f;" class="color-picker" id="yellow"></div>
-                <div style="cursor:pointer;position:absolute;top:35%;left:8%;width:20px;height:20px;background:#d35400;" class="color-picker" id="orange"></div>
-                <div style="cursor:pointer;position:absolute;top:35%;left:11%;width:20px;height:20px;background:#2c3e50;" class="color-picker" id="black"></div>
-                <div style="position:absolute;top:42%;left:3%;padding-top:.85%"><b>Eraser</b></div>
-                <div style="cursor:pointer;position:absolute;top:47%;left:4%;width:30px;height:30px;background:white;border:2px solid;" class="eraser" id="white"></div>
-                <input type="button" class="clear" value="clear" id="clr" size="30" style="cursor:pointer;position:absolute;top:47%;left:8%;">
-                <div style="position:absolute;top:56%;left:3%;padding-top:.65%"><b>Change Brush Size</b></div>
-                <input type="button" class="minus-size" value="-" id="change" size="30" style="cursor:pointer;position:absolute;top:60%;left:8%;">
-                <input type="button" class="plus-size" value="+" id="change" size="30" style="cursor:pointer;position:absolute;top:60%; left:4%">
-                <div style="position:absolute;top:66%;left:3%;padding-top:.65%"><b>Collaborate</b></div>
-                <input type="button" class="pull-right btn" value="Collaborate" onclick="TogetherJS(this); return false;" size="30" style="cursor:pointer;position:absolute;top:70%;left:3%;">
+                <div style="cursor:pointer;position:absolute;top:0.5%;left:25%;width:20px;height:20px;background:#27ae60;" class="color-picker" id="green"></div>
+                <div style="cursor:pointer;position:absolute;top:0.5%;left:28%;width:20px;height:20px;background:#2980b9;" class="color-picker" id="blue"></div>
+                <div style="cursor:pointer;position:absolute;top:0.5%;left:31%;width:20px;height:20px;background:#e74c3c;" class="color-picker" id="red"></div>
+                <div style="cursor:pointer;position:absolute;top:3%;left:25%;width:20px;height:20px;background:#f1c40f;" class="color-picker" id="yellow"></div>
+                <div style="cursor:pointer;position:absolute;top:3%;left:28%;width:20px;height:20px;background:#d35400;" class="color-picker" id="orange"></div>
+                <div style="cursor:pointer;position:absolute;top:3%;left:31%;width:20px;height:20px;background:#2c3e50;" class="color-picker" id="black"></div>
+                <div style="cursor:pointer;position:absolute;top:0.5%;left:37.5%;width:30px;height:30px;background:white;border:2px solid;" class="eraser" id="white"></div>
+                <input type="button" class="clear" value="clear" id="clr" size="30" style="cursor:pointer;position:absolute;top:0.5%;left:47.5%;">
+                <input type="button" class="minus-size" value="-" id="change" size="30" style="cursor:pointer;position:absolute;top:1%;left:66%;">
+                <input type="button" class="plus-size" value="+" id="change" size="30" style="cursor:pointer;position:absolute;top:1%; left:62%">
+                <input type="button" class="pull-right btn" value="Collaborate" onclick="TogetherJS(this); return false;" size="30" style="cursor:pointer;position:absolute;top:2%;left:75%;">
                 
             </div>
-           
-
+        
         </nav>
     </div>
     <script type="text/javascript">
-    var canvas = document.getElementById('sketch');
+    var canvas = document.getElementById('comic');
     var context = canvas.getContext('2d');
 
     canvas.width = $('#sketchContainer').outerWidth();
@@ -1109,7 +1109,8 @@
         if (!msg.sameUrl) {
             return;
         }
-        clear(false);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        lines = [];
     });
 
     TogetherJS.hub.on('togetherjs.hello', function() {
@@ -1144,7 +1145,7 @@
             ctx.lineWidth = 3;
             ctx.strokeStyle = cursorColor;
             ctx.stroke();
-            $('#sketch').css('cursor', 'url(' + cursorGenerator.toDataURL('image/png') + ') ' + cursorSize / 2 + ' ' + cursorSize / 2 + ',crosshair');
+            $('#comic').css('cursor', 'url(' + cursorGenerator.toDataURL('image/png') + ') ' + cursorSize / 2 + ' ' + cursorSize / 2 + ',crosshair');
         }
         changeMouse();
 
@@ -1196,15 +1197,7 @@
         });
     });
     </script>
-    <footer>
-        <p style="margin: auto; text-align: center; font-size: 15px">&copy; Copyright Onclass</p> <!-- This is mandatory to exist if being used anywhere else-->
-    </footer>
-</body>
-
-</html>
-
-
-<!-- <script>
+    <script>
             var book = new ComicBook('comic', [
                 'RatsMusicalBand/Rat s Musical Band_Wendy White-page-001.jpg',
                 'RatsMusicalBand/Rat s Musical Band_Wendy White-page-002.jpg',
@@ -1249,4 +1242,11 @@
             $(window).on('resize', function(event) {
                 book.draw();
             });
-        </script> -->
+        </script>
+    <footer>
+        <p style="margin: auto; text-align: center; font-size: 15px">&copy; Copyright Onclass</p> <!-- This is mandatory to exist if being used anywhere else-->
+    </footer>
+</body>
+
+</html>
+
