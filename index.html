@@ -849,6 +849,46 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="reader/js/reader.js"></script>
         <link rel="stylesheet" href="reader/reader.css">
+        <script type="text/javascript">
+                        var book = new ComicBook('comic', [
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-001.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-002.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-003.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-004.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-005.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-006.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-007.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-008.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-009.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-010.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-011.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-012.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-013.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-014.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-015.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-016.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-017.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-018.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-019.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-020.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-021.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-022.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-023.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-024.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-025.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-026.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-027.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-028.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-029.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-030.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-031.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-032.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-033.jpg',
+                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-034.jpg',
+                
+            ], {
+        });
+        </script>
 </head>
 
 <body>
@@ -945,6 +985,7 @@
         if (m) {
             context.clearRect(0, 0, canvas.width, canvas.height);
             lines = [];
+            book.draw()
             if (send && TogetherJS.running) {
                 TogetherJS.send({
                     type: 'clear'
@@ -1118,6 +1159,7 @@
         }
         context.clearRect(0, 0, canvas.width, canvas.height);
         lines = [];
+        book.draw()
     });
 
     TogetherJS.hub.on('togetherjs.hello', function() {
@@ -1208,45 +1250,6 @@
     });
     </script>
     <script>
-            var book = new ComicBook('comic', [
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-001.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-002.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-003.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-004.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-005.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-006.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-007.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-008.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-009.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-010.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-011.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-012.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-013.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-014.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-015.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-016.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-017.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-018.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-019.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-020.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-021.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-022.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-023.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-024.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-025.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-026.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-027.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-028.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-029.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-030.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-031.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-032.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-033.jpg',
-                'RatsMusicalBand/Rat s Musical Band_Wendy White-page-034.jpg',
-                
-            ], {
-        });
-
             book.draw();
 
             $(window).on('resize', function(event) {
