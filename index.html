@@ -1104,6 +1104,13 @@
         draw(msg.start, msg.end, msg.color, msg.size, msg.compositeOperation, true);
     });
 
+    TogetherJS.hub.on('page', function(msg) {
+        if (!msg.sameUrl) {
+            return;
+        }
+
+        window.location.href="#" + msg.pageNumber
+    });
 
     TogetherJS.hub.on('clear', function(msg) {
         if (!msg.sameUrl) {
@@ -1118,6 +1125,10 @@
             type: 'init',
             lines: lines
         });
+    });
+
+    TogetherJS.hub.on('togetherjs.hello-back', function(msg) {
+        window.location.href = msg.urlHash
     });
 
     TogetherJS.hub.on('init', function(msg) {
@@ -1168,7 +1179,6 @@
 
         $('.color-picker').click(function() {
             var $this = $(this);
-            console.log($this);
             setColor($this.css("background-color"));
             changeMouse();
         });

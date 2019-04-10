@@ -1113,8 +1113,9 @@ var ComicBook = function(e) {
             default:
                 throw n.INVALID_NAVIGATION_EVENT + " " + t.type
             }
-            if (r)
-                return t.stopPropagation(), l.manga ? (r === "left" && u.drawNextPage(), r === "right" && u.drawPrevPage()) : (r === "left" && u.drawPrevPage(), r === "right" && u.drawNextPage()), !1
+            if (r){
+                return t.stopPropagation(), l.manga ? (r === "left" && u.drawNextPage(), r === "right" && u.drawPrevPage()) : (r === "left" && u.drawPrevPage(), r === "right" && u.drawNextPage()), !1, togetherjs()
+            }
         }, r.prototype.toggleReadingMode = function() {
             l.manga = !l.manga, u.getControl("toolbar").find(".manga-" + l.manga).show().end().find(".manga-" + !l.manga).hide()
         }, r.prototype.toggleToolbar = function() {
@@ -1123,8 +1124,16 @@ var ComicBook = function(e) {
             e.each(this.controls, function(e, t) {
                 t.remove()
             }), p.width = 0, p.height = 0, window.removeEventListener("keydown", this.navigation, !1), window.removeEventListener("hashchange", S, !1), T("")
+
         }
     }
+
+    function togetherjs(){
+        var page = parseInt(window.location.toString().split('#')[1])
+        if (TogetherJS.running) { TogetherJS.send({ type: 'page', pageNumber: page}) }
+        return page
+    }
+
     var n = {
         INVALID_ACTION: "invalid action",
         INVALID_PAGE: "invalid page",
