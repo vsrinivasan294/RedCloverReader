@@ -1171,7 +1171,6 @@
     });
 
     TogetherJS.hub.on('init', function(msg) {
-    	console.log(msg)
         reDraw(msg.lines);
         lines = msg.lines;
         if(msg.urlHash != window.location.hash){
