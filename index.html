@@ -1165,17 +1165,18 @@
     TogetherJS.hub.on('togetherjs.hello', function() {
         TogetherJS.send({
             type: 'init',
-            lines: lines
+            lines: lines,
+            urlHash: window.location.hash.substring(1)
         });
     });
 
-    TogetherJS.hub.on('togetherjs.hello-back', function(msg) {
-        window.location.href = msg.urlHash
-    });
-
     TogetherJS.hub.on('init', function(msg) {
+    	console.log(msg)
         reDraw(msg.lines);
         lines = msg.lines;
+        if(msg.urlHash != window.location.hash){
+        	window.location.href = "#"+msg.urlHash
+        }
     });
 
     $(document).ready(function() {
