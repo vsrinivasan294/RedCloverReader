@@ -293,7 +293,7 @@ button, input, label {
 	z-index: 99;
 	margin-bottom: 0;
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
-	opacity: 0;
+	/*opacity: 0;*/
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -353,7 +353,7 @@ button, input, label {
 }
 
 body:not(.mobile) .toolbar li:hover > .dropdown {
-	display: block;
+	display: block!important;
 }
 
 /* dropdown arrow code taken from Twitter Bootstrap 2.3.1 */

@@ -1,0 +1,13 @@
+README
+
+What I did in this latest update:
+Merged the toolbars - black toolbar doesn't hide
+Added a color picker
+Brush Size is changed with a slider
+Fixed the Refresh issue
+Increased code organization by splitting into multiple files
+
+
+Notable things to fix before deployment:
+If you open the color picker but dont pick a color the dropdown shows
+If you change brush options and then go to the next page the brush goes back to the default settings
