@@ -1,13 +1,45 @@
 README
 
-What I did in this latest update:
+What I did in this latest update (5/5):
 Merged the toolbars - black toolbar doesn't hide
 Added a color picker
 Brush Size is changed with a slider
 Fixed the Refresh issue
 Increased code organization by splitting into multiple files
 
+(5/6):
+If you change brush options and goto next page it stays the same unlike before
+If you open color picker but don't pick a color then dropdown disappears unlike before
 
-Notable things to fix before deployment:
-If you open the color picker but dont pick a color the dropdown shows
-If you change brush options and then go to the next page the brush goes back to the default settings
+Email List of Fixes/Additions:
+1 - Merging toolbars and adding different functions (upload, whiteboard, read) [WIP]
+	* Partially done - still need to add the different collab features
+2 - Managing invitations through their app instead of through social media/messaging
+3 - Audio Chat fix
+4 - Video Chat addition
+	* Not started but I personally think this isn't a good idea especially if children will be using it - can implement if they adamantly want it
+5 - Navigation arrows too big [DONE]
+	* Moved to toolbar
+6 - Multi-Browser Support
+7 - Multi-Device Support
+8 - +/- for brush size is buggy [DONE]
+	* Replaced with a slider
+9 - Black toolbar is buggy - doesn't show always [DONE]
+	* Made it always show instead of only on hover
+10 - Single/Double toggle page doesn't sync with other users [DONE]
+	* Removed the single/double page function since it seemed unecessary - can add back with the syncing if needed
+11 - Book flipping margins interfere with drawing space [DONE]
+	* Moved arrows to toolbar
+12 - Expand color palette [DONE]
+	* Added more color options along with a color wheel
+13 - Eraser
+14 - Type on Book/Site
+15 - Copy-Paste from text box + Threaded reply system
+16 - User name box size needs to fit name
+17 - Navigation is linked to keyboard [DONE]
+18 - Function names on hover for toolbar
+19 - Page fitting buttons work [DONE]
+	* Removed them as the book is anyways full screen already
+20 - Remove mentions of togetherjs
+	* I actually cannot find where in code the popup happens so idk if this is something we can do - I'll contact the developers maybe
+21 - Saving/Record collaborative sessions - use for studying later

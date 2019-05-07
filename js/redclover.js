@@ -16,10 +16,10 @@ var canvas = document.getElementById('comic');
 
     var ongoingTouches = [];
 
-    context.lineWidth = $(".brush-size").value;//2;
+    context.lineWidth = 2;
     context.lineJoin = 'round';
     context.lineCap = 'round';
-    context.strokeStyle = $(".sp-preview-inner").css("background-color");//'#000';
+    context.strokeStyle = '#000';
 
     canvas.addEventListener('mousedown', function(e) {
         lastMouse = {
@@ -27,6 +27,12 @@ var canvas = document.getElementById('comic');
             y: e.pageY - this.offsetTop
         };
         canvas.addEventListener('mousemove', move, false);
+    }, false);
+
+    canvas.addEventListener('mouseup', function(e){
+        if($(":focus") != $(".dropdown")){
+          $(".dropdown").hide();
+        }
     }, false);
 
     canvas.addEventListener('mouseout', function() {
@@ -115,7 +121,9 @@ var canvas = document.getElementById('comic');
             x: (800 / canvas.width) * lastMouse.x,
             y: (400 / canvas.height) * lastMouse.y
         };
-        draw(sendLastMouse, sendMouse, $(".sp-preview-inner").css("background-color"), $(".brush-size").value, context.globalCompositeOperation, true);
+        context.strokeStyle = $(".sp-preview-inner").css("background-color");
+        context.lineWidth = $(".brush-size")[0].value;
+        draw(sendLastMouse, sendMouse, context.strokeStyle, context.lineWidth, context.globalCompositeOperation, true);
         if (TogetherJS.running) {
             TogetherJS.send({
                 type: 'draw',
@@ -163,6 +171,8 @@ var canvas = document.getElementById('comic');
             if (idx >= 0) {
                 var lastTouch = ongoingTouches[idx];
                 var touch = convertTouch(touches[i]);
+                context.strokeStyle = $(".sp-preview-inner").css("background-color");
+                context.lineWidth = $(".brush-size")[0].value;
                 draw(lastTouch, touch, context.strokeStyle, context.lineWidth, context.globalCompositeOperation, true);
                 if (TogetherJS.running) {
                     TogetherJS.send({
@@ -188,6 +198,8 @@ var canvas = document.getElementById('comic');
             if (idx >= 0) {
                 var lastTouch = ongoingTouches[idx];
                 var touch = convertTouch(touches[i]);
+                context.strokeStyle = $(".sp-preview-inner").css("background-color");
+                context.lineWidth = $(".brush-size")[0].value;  
                 draw(lastTouch, touch, context.strokeStyle, context.lineWidth, context.globalCompositeOperation, true);
                 if (TogetherJS.running) {
                     TogetherJS.send({
@@ -339,6 +351,7 @@ var canvas = document.getElementById('comic');
         $(".sp-container").mouseover(function(){
             $(".dropdown").show();
         })
+
     });
 
     book.draw();
