@@ -13,6 +13,7 @@ If you open color picker but don't pick a color then dropdown disappears unlike 
 
 (5/9):
 Worked on multiple device support
+Tested cross-browser support
 
 Email List of Fixes/Additions:
 1 - Merging toolbars and adding different functions (upload, whiteboard, read) [WIP]
@@ -23,7 +24,9 @@ Email List of Fixes/Additions:
 	* Not started but I personally think this isn't a good idea especially if children will be using it - can implement if they adamantly want it
 5 - Navigation arrows too big [DONE]
 	* Moved to toolbar
-6 - Multi-Browser Support
+6 - Multi-Browser Support [WIP?]
+	* Tested on Chrome and Safari and it works
+	* Needs to be tested on Firefox and Explorer/Edge
 7 - Multi-Device Support [WIP]
 	* iPad support is essentialy done
 	* iPhone support is almost done just need to make sure togetherJS menu isn't blocking the toolbar
