@@ -815,7 +815,7 @@ Handlebars.Exception = function(e) {
     }), t.progressbar = e(function(e, t, n, r, i) {
         return this.compilerInfo = [2, ">= 1.0.0-rc.3"], n = n || e.helpers, i = i || {}, '<div id="cb-status" class="cb-control">\n	<div id="cb-progress-bar">\n		<div class="progressbar-value"></div>\n	</div>\n</div>\n'
     }), t.toolbar = e(function(e, t, n, r, i) {
-        return this.compilerInfo = [2, ">= 1.0.0-rc.3"], n = n || e.helpers, i = i || {}, '<div class="toolbar">\n\n	<ul class="pull-left">\n		<li class="close">\n			<button data-trigger="click" data-action="close" title="close" class="icon-remove-sign"></button>\n		</li>\n		<li class="close separator"></li>\n		<li>\n			<button title="Drawing Settings" class="icon-settings" data-toggle="dropdown"></button>\n			<div class="dropdown">\n				<form name="image-enhancements" >\n					<div class="sliders"><div class="control-group">\n							<label title="Brush Size" class="icon-adjust"></label>\n							<input data-trigger="change" data-action="brush-size" class="brush-size" type="range" min="1" max="40" step="3" value="1">\n						</div>\n					</div>\n					<div class="control-group pull-left">\n						<input type="text" id="picker"> </div>\n					<div class="control-group pull-right">\n						<input type="button" onclick="TogetherJS(this); return false;" value="Collaborate"><br>\n\n<input type="button" class="clear" value="Clear">\n					</div>\n				</form>\n			</div>\n		</li>\n<li>\n			<button data-trigger="click" data-action="zoomOut" title="zoom out" class="icon-zoom-out"></button>\n		</li>\n		<li>\n			<button data-trigger="click" data-action="zoomIn" title="zoom in" class="icon-zoom-in"></button>\n		</li>\n</ul>\n\n	<ul class="pull-right"><li><button data-trigger="click" data-action="navigation" data-navigate-side="left" class="icon-arrow-left-3"></button><li><button data-trigger="click" data-action="navigation" data-navigate-side="right" class="icon-arrow-right-3"></button><span id="current-page"></span> / <span id="page-count"></span></li>\n	</ul>\n\n</div>\n'
+        return this.compilerInfo = [2, ">= 1.0.0-rc.3"], n = n || e.helpers, i = i || {}, '<div class="toolbar">\n\n	<ul class="pull-left">\n		<li class="close">\n			<button data-trigger="click" data-action="close" title="close" class="icon-remove-sign"></button>\n		</li>\n		<li class="close separator"></li>\n		<li>\n			<button title="Drawing Settings" class="icon-settings" data-toggle="dropdown"></button>\n			<div class="dropdown">\n				<form name="image-enhancements" >\n					<div class="sliders"><div class="control-group">\n							<label title="Brush Size" class="icon-adjust"></label>\n							<input data-trigger="change" data-action="brush-size" class="brush-size" type="range" min="1" max="40" step="3" value="1">\n						</div>\n					</div>\n					<div class="control-group pull-left">\n						<input type="text" id="picker"> </div>\n					<div class="control-group pull-right">\n						<input type="button" onclick="TogetherJS(this); return false;" value="Collaborate"><br>\n\n<input type="button" class="clear" value="Clear">\n					</div>\n				</form>\n			</div>\n		</li>\n<li>\n			<button data-trigger="click" data-action="zoomOut" title="zoom out" class="icon-zoom-out"></button>\n		</li>\n		<li>\n			<button data-trigger="click" data-action="zoomIn" title="zoom in" class="icon-zoom-in"></button>\n      <li>\n          <button data-trigger="click" data-action="toggleLayout" title="toggle one/two pages at a time" class="icon-file layout layout-single"></button>\n           <button data-trigger="click" data-action="toggleLayout" title="toggle one/two pages at a time" class="icon-copy layout layout-double"></button>\n       </li>\n		</li>\n</ul>\n\n	<ul class="pull-right"><li><button data-trigger="click" data-action="navigation" data-navigate-side="left" class="icon-arrow-left-3"></button><li><button data-trigger="click" data-action="navigation" data-navigate-side="right" class="icon-arrow-right-3"></button><span id="current-page"></span> / <span id="page-count"></span></li>\n	</ul>\n\n</div>\n'
     })
 }();
 var ComicBook = function(e) {
@@ -872,7 +872,7 @@ var ComicBook = function(e) {
             libPath: "/lib/",
             forward_buffer: 3
         };
-        this.isMobile = !1, /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent) && (this.isMobile = !0, document.body.classList.add("mobile"), f.displayMode = "single", window.addEventListener("load", function() {
+        this.isMobile = !1, /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent) && (this.isMobile = !0, $("body").addClass("mobile"), f.displayMode = "single", window.addEventListener("load", function() {
             setTimeout(function() {
                 window.scrollTo(0, 1)
             }, 0)
@@ -1125,12 +1125,13 @@ var ComicBook = function(e) {
                 t.remove()
             }), p.width = 0, p.height = 0, window.removeEventListener("keydown", this.navigation, !1), window.removeEventListener("hashchange", S, !1), T("")
 
-        }
+        }, r.prototype.togetherjs = function(){togetherjs()}
     }
 
     function togetherjs(){
         var page = parseInt(window.location.toString().split('#')[1])
-        if (TogetherJS.running) { TogetherJS.send({ type: 'page', pageNumber: page}) }
+        var displayMode = $(".layout:visible").prop("classList")[2]
+        if (TogetherJS.running) { TogetherJS.send({ type: 'page', pageNumber: page, displayMode: displayMode}) }
         return page
     }
 

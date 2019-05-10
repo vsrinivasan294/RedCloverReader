@@ -11,6 +11,9 @@ Increased code organization by splitting into multiple files
 If you change brush options and goto next page it stays the same unlike before
 If you open color picker but don't pick a color then dropdown disappears unlike before
 
+(5/9):
+Worked on multiple device support
+
 Email List of Fixes/Additions:
 1 - Merging toolbars and adding different functions (upload, whiteboard, read) [WIP]
 	* Partially done - still need to add the different collab features
@@ -21,7 +24,9 @@ Email List of Fixes/Additions:
 5 - Navigation arrows too big [DONE]
 	* Moved to toolbar
 6 - Multi-Browser Support
-7 - Multi-Device Support
+7 - Multi-Device Support [WIP]
+	* iPad support is essentialy done
+	* iPhone support is almost done just need to make sure togetherJS menu isn't blocking the toolbar
 8 - +/- for brush size is buggy [DONE]
 	* Replaced with a slider
 9 - Black toolbar is buggy - doesn't show always [DONE]

@@ -239,7 +239,13 @@ var canvas = document.getElementById('comic');
             return;
         }
 
+        if(msg.displayMode != $(".layout:visible").prop("classList")[2]){
+            book.toggleLayout()
+        }
+
         window.location.href="#" + msg.pageNumber
+        console.log($(".layout:visible").prop("classList")[2] + "  " + msg.displayMode)
+
     });
 
     TogetherJS.hub.on('clear', function(msg) {
@@ -252,16 +258,22 @@ var canvas = document.getElementById('comic');
     });
 
     TogetherJS.hub.on('togetherjs.hello', function() {
+        var displayMode = $(".layout:visible").prop("classList")[2]
         TogetherJS.send({
             type: 'init',
             lines: lines,
-            urlHash: window.location.hash.substring(1)
+            urlHash: window.location.hash.substring(1),
+            displayMode: displayMode
         });
     });
 
     TogetherJS.hub.on('init', function(msg) {
         reDraw(msg.lines);
         lines = msg.lines;
+
+        if(msg.displayMode != $(".layout:visible").prop("classList")[2]){
+            book.toggleLayout()
+        }
         if(msg.urlHash != window.location.hash){
         	window.location.href = "#"+msg.urlHash
         }
@@ -351,6 +363,11 @@ var canvas = document.getElementById('comic');
         $(".sp-container").mouseover(function(){
             $(".dropdown").show();
         })
+
+        $(".layout").click(function(){
+            console.log("test")
+            book.togetherjs()
+        });
 
     });
 
