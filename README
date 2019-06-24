@@ -15,6 +15,11 @@ If you open color picker but don't pick a color then dropdown disappears unlike 
 Worked on multiple device support
 Tested cross-browser support
 
+(6/22-6/23):
+Made the UI look nicer
+Found TogetherJS source code and looked into config/started looking at recording sessions
+Removed most mentions of togetherjs
+
 Email List of Fixes/Additions:
 1 - Merging toolbars and adding different functions (upload, whiteboard, read) [WIP]
 	* Partially done - still need to add the different collab features
@@ -46,7 +51,8 @@ Email List of Fixes/Additions:
 17 - Navigation is linked to keyboard [DONE]
 18 - Function names on hover for toolbar [DONE]
 19 - Page fitting buttons work [DONE]
-20 - Remove mentions of togetherjs
+20 - Remove mentions of togetherjs [DONE]
+	* Just double check this
 21 - Saving/Record collaborative sessions - use for studying later
 
 
