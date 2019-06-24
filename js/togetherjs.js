@@ -261,7 +261,10 @@
                 }
             }
             if (min) {
-                addScript("/togetherjs/togetherjsPackage.js");
+                // addScript("/togetherjs/togetherjsPackage.js");
+                var script = document.createElement("script");
+                script.src = "togetherjsPackage.js";
+                document.head.appendChild(script);
             } else {
                 addScript("/togetherjs/libs/require.js");
             }

@@ -7,7 +7,7 @@
     }
     
     .flex-container > * {
-        padding: 15px;
+        padding: 10px;
         -webkit-flex: 1 100%;
         flex: 1 100%;
     }
@@ -25,6 +25,8 @@
         font-family: "Roboto", serif;
         letter-spacing: 1px;
     }
+
+    
     
     #clr {
         width: 5%;
