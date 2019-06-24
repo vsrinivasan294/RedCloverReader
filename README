@@ -35,7 +35,6 @@ Email List of Fixes/Additions:
 9 - Black toolbar is buggy - doesn't show always [DONE]
 	* Made it always show instead of only on hover
 10 - Single/Double toggle page doesn't sync with other users [DONE]
-	* Removed the single/double page function since it seemed unecessary - can add back with the syncing if needed
 11 - Book flipping margins interfere with drawing space [DONE]
 	* Moved arrows to toolbar
 12 - Expand color palette [DONE]
@@ -45,9 +44,35 @@ Email List of Fixes/Additions:
 15 - Copy-Paste from text box + Threaded reply system
 16 - User name box size needs to fit name
 17 - Navigation is linked to keyboard [DONE]
-18 - Function names on hover for toolbar
+18 - Function names on hover for toolbar [DONE]
 19 - Page fitting buttons work [DONE]
-	* Removed them as the book is anyways full screen already
 20 - Remove mentions of togetherjs
-	* I actually cannot find where in code the popup happens so idk if this is something we can do - I'll contact the developers maybe
 21 - Saving/Record collaborative sessions - use for studying later
+
+
+
+Timeline [IN PRIORITY]:
+June:
+	- Bootstrap the page
+		* Make navbar bootstrap
+		* Make everything in a jumbotron or something and make it look "clean"
+	- Edit the popup on first useso it doesn't talk about togetherjs but still explains everything
+	- Audio Chat Fix
+
+July:
+	- Add Eraser
+	- Username box size fits name
+	- Typing feature
+	- Start work on the on the messaging system
+	- Start work on managing invitations from their site
+
+August:
+	- Messaging System
+		* Copy paste
+		* Threaded reply
+	- Invitations
+	- Video Chat
+
+Sometime in the Future:
+	- Saving Collaborative sessions - used for studying later on
+	- Different collaborative features - image upload, videos, whiteboard, etc.
