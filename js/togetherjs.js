@@ -260,14 +260,14 @@
                     window.require = requireConfig;
                 }
             }
-            if (min) {
+            // if (min) {
                 // addScript("/togetherjs/togetherjsPackage.js");
                 var script = document.createElement("script");
-                script.src = "togetherjsPackage.js";
+                script.src = "js/togetherjsPackage.js";
                 document.head.appendChild(script);
-            } else {
-                addScript("/togetherjs/libs/require.js");
-            }
+            // } else {
+                // addScript("/togetherjs/libs/require.js");
+            // }
         };
 
         TogetherJS.pageLoaded = Date.now();
