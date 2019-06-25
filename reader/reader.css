@@ -283,7 +283,7 @@ button, input, label {
 
 .toolbar {
 	color: white;
-	background-color: #343a40;
+	background-color: #222b35;
 	/*background-image: linear-gradient(to bottom, rgb(80, 80, 80), rgb(17, 17, 17));*/
 	overflow: visible;
 	padding: 0.75em;
