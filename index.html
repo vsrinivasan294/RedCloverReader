@@ -9,7 +9,8 @@
     <script>
     var TogetherJSConfig_autoStart = true;
     var TogetherJSConfig_suppressJoinConfirmation = true;
-    var TogetherJSConfig_dontShowClicks = ":not(canvas"
+    var TogetherJSConfig_dontShowClicks = ":not(canvas";
+    //var cropOn = false;
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -79,13 +80,110 @@
     
     <div class="flex-container" id="sketchapp">
     <section class="pagetitle"><h1>RedCloverReader</h1></section>
-        <div id="sketchContainer" class="article" style="width: 100%; border: 1px solid rgba(0,0,0,.2);">
+    <!-- <center><button onclick = "drawBoxes()" type="button">Draw Boxes!!</button></center> 
+     -->    
+     <div id="sketchContainer" class="article" style="width: 100%; border: 1px solid rgba(0,0,0,.2);">
             <center>
                 <canvas id="comic" width="900%" height="570%" color="#FFFFFF" style="\border:6px solid #ecf0f1;"></canvas>
             </center>
         </div>
     </div>
     <script src="js/redclover.js"></script>
+
+<!-- <script>
+var numSaved = 0;
+var links = [];
+
+// This is a function that sets up the draw box method to draw around the cells
+function drawBoxes() {
+  initDrawBoxes(document.getElementById('canvas'));
+}
+
+
+//This method sets up the motion between points as the mouse moves and draws along it  
+function initDrawBoxes(canvas) {
+
+    // This method saves a snippet to a file
+    function saveSnippet(element) {
+      var preview = document.querySelector('img'); //selects the query named img
+      var hidden_canv = document.createElement('canvas');
+      hidden_canv.style.display = 'none';
+      document.body.appendChild(hidden_canv);
+      hidden_canv.width = mouse.x- mouse.startX;
+      hidden_canv.height = mouse.y- mouse.startY;
+
+      var hidden_ctx = hidden_canv.getContext('2d');
+      hidden_ctx.drawImage(
+          preview,
+          mouse.startX - preview.offsetLeft,
+          mouse.startY - preview.offsetTop,
+          mouse.x- mouse.startX,
+          mouse.y- mouse.startY,
+          0,
+          0,
+          hidden_canv.width,
+          hidden_canv.height
+      );
+      var hidden_data = hidden_canv.toDataURL("image/png").replace("image/png", "image/octet-stream");
+
+      var downloadAnchor = document.getElementById('download');
+      downloadAnchor.setAttribute('download', 'selection'+ numSaved +'.png');
+      downloadAnchor.innerHTML = "Download the selection(s)!";
+      links.push(hidden_data);
+      numSaved ++;
+    }
+
+    function setMousePositionForBox(e) {
+        var ev = e || window.event; //Moz || IE
+        if (ev.pageX) { //Moz
+            mouse.x = ev.pageX + window.pageXOffset;
+            mouse.y = ev.pageY + window.pageYOffset;
+        } else if (ev.clientX) { //IE
+            mouse.x = ev.clientX + document.body.scrollLeft;
+            mouse.y = ev.clientY + document.body.scrollTop;
+        }
+    };
+    //Defining the mouse before it draws
+    var mouse = {
+        x: 0,
+        y: 0,
+        startX: 0,
+        startY: 0
+    };
+    var element = null;
+    canvas.onmousemove = function (e) {
+        setMousePositionForBox(e);
+        if (element !== null) {
+            element.style.width = Math.abs(mouse.x - mouse.startX) + 'px';
+            element.style.height = Math.abs(mouse.y - mouse.startY) + 'px';
+            element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
+            element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y + 'px' : mouse.startY + 'px';
+        }
+    }
+    canvas.onclick = function (e) {
+        if (element !== null) {
+            console.log("savingSnippet....");
+            saveSnippet();
+            element = null;
+            canvas.style.cursor = "default";
+            console.log("finsihed.");
+
+        } else {
+            console.log("begun.");
+            mouse.startX = mouse.x;
+            mouse.startY = mouse.y;
+            element = document.createElement('div');
+            element.className = 'rectangle'
+            element.style.left = mouse.x + 'px';
+            element.style.top = mouse.y + 'px';
+            canvas.appendChild(element)
+            canvas.style.cursor = "crosshair";
+        }
+    }
+}
+
+</script>
+ -->
 </body>
 
 </html>
